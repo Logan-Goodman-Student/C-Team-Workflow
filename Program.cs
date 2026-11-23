@@ -121,25 +121,15 @@ bool Q4 ()
     {
         Console.WriteLine(" ");
         Console.WriteLine("ಠ_ಠ ...");
-        Task.Delay(2000);
         Console.WriteLine("ب_ب ...");
-        Task.Delay(2000);
         Console.WriteLine("(╬ಠ益ಠ) GRRRR HRRR");
-        Task.Delay(2000);
         Console.WriteLine("(ノಠ益ಠノ) HHRRRRR RR");
-        Task.Delay(2000);
         Console.WriteLine("୧༼ಠ益ಠ༽୨ RAAAAAAAAAAAH!");
-        Task.Delay(2000);
         Console.WriteLine("ALRIGHT THAT'S IT!");
-        Task.Delay(2000);
         Console.WriteLine("IF YOU LOVE VERITY SO MUCH");
-        Task.Delay(2000);
         Console.WriteLine("THEN YOU CAN MEET HIM NOW!");
-        Task.Delay(2000);
         Console.WriteLine("HE WILL BE ON YOUR DOORSTEP IN 3 SECONDS");
-        Task.Delay(2000);
         Console.WriteLine("I HOPE YOU'RE HAPPY!");
-        Task.Delay(2000);
         Console.WriteLine(" ");
         return wrong;
     }
@@ -165,3 +155,4 @@ bool Q4 ()
         return wrong;
     }
 }
+
