@@ -120,10 +120,6 @@ bool Q4 ()
     if(answer4 == 4)
     {
         Console.WriteLine(" ");
-        Console.WriteLine("ಠ_ಠ ...");
-        Console.WriteLine("ب_ب ...");
-        Console.WriteLine("(╬ಠ益ಠ) GRRRR HRRR");
-        Console.WriteLine("(ノಠ益ಠノ) HHRRRRR RR");
         Console.WriteLine("୧༼ಠ益ಠ༽୨ RAAAAAAAAAAAH!");
         Console.WriteLine("ALRIGHT THAT'S IT!");
         Console.WriteLine("IF YOU LOVE VERITY SO MUCH");
