@@ -51,7 +51,7 @@ bool Q1 ()
     else if(wrong == true)
     {   
         Console.WriteLine(" ");
-        Console.WriteLine("FALSE, answer again");
+        Console.WriteLine("FALSE, answer again.");
         Console.WriteLine(" ");
         return wrong;
     }
@@ -86,7 +86,7 @@ bool Q2 ()
     else if (wrong == true)
     {   
         Console.WriteLine(" ");
-        Console.WriteLine("FALSE, answer again");
+        Console.WriteLine("FALSE, answer again.");
         Console.WriteLine(" ");
         return wrong;
     }
@@ -152,7 +152,7 @@ bool Q4 ()
     else if(wrong == true)
     {   
         Console.WriteLine(" ");
-        Console.WriteLine("Yes, he does love that, but what else?");
+        Console.WriteLine("FALSE, answer again.");
         Console.WriteLine(" ");
         return wrong;
     }
