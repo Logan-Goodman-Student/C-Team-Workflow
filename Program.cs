@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("And now for something American related!");
-int score = 0;
+
 
 do{
     await Task.Delay(2000);
@@ -10,7 +10,7 @@ do{
     Console.WriteLine("4. Verity");
 }while (Q1());
 
-score++;
+
 
 do{
     await Task.Delay(2000);
@@ -21,7 +21,7 @@ do{
     Console.WriteLine("4. Yuri Gagarin");
 }while (Q2());
 
-score++;
+
 
 do{
     await Task.Delay(2000);
@@ -33,7 +33,7 @@ do{
     Console.WriteLine("4. All Of The Above");
 }while (Q3());
 
-score++;
+
 
 do{
     await Task.Delay(2000);
@@ -44,9 +44,6 @@ do{
     Console.WriteLine("4. Verity");
 }while (Q4());
 
-score++;
-
-Console.WriteLine("Here's your score!");
 
 bool Q1 ()
 {
