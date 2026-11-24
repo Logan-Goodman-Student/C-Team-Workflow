@@ -1,6 +1,6 @@
 ﻿Console.WriteLine("And now for something American related!");
 Console.WriteLine("(This is NOT scored because I have no way to implement it in time with");
-Console.WriteLine("(my restrictive method of using functions, so consider this a fun bonus)");
+Console.WriteLine("my restrictive method of using functions, so consider this a fun bonus)");
 
 do{
     await Task.Delay(2000);
