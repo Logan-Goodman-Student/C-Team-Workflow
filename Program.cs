@@ -173,7 +173,7 @@ bool Q4 ()
     else
     {
         Console.WriteLine(" ");
-        Console.WriteLine("Correct, continue to the next question");
+        Console.WriteLine("Correct, you have completed the bonus!");
         Console.WriteLine(" ");
         return wrong;
     }
