@@ -1,323 +1,123 @@
-﻿await QuestionOne(0);
-
-static void WaitForPlayer()
+﻿Console.WriteLine("These next 4 questions were made by me.");
+int playerScore = 0;
+void WyattQuestion1()
 {
-    Console.WriteLine("\nPress Enter to continue...");
+Console.WriteLine("Where was Michael De Santa's first score located?");
+Console.WriteLine("1. Liberty City");
+Console.WriteLine("2. Carcer City");
+Console.WriteLine("3. Los Santos");
+Console.WriteLine("4. North Yankton");
 
-    ConsoleKeyInfo key;
-
-    do
-    {
-        key = Console.ReadKey(intercept: true);
-    } while (key.Key != ConsoleKey.Enter);
-
-    Console.Clear();
-}
-
-static async Task AnswerDelay()
+string userScore = Console.ReadLine();
+int answer = int.Parse(userScore);
+if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
 {
-    for (int i = 0; i < 3; i++)
+    if(answer == 2)
     {
-        await Task.Delay(1000);
-        Console.Write(".");
-    }
-
-    Console.WriteLine();
-}
-
-// Display the question again until the player enters A, B, C, or D.
-static int ReadValidAnswer(string question, string[] answers)
-{
-    string letters = "ABCD";
-    int selectedIndex;
-    bool invalidInput = false;
-
-    do
-    {
-        Console.WriteLine(question);
-        Console.WriteLine();
-
-        for (int i = 0; i < answers.Length; i++)
-        {
-            Console.WriteLine($"{letters[i]}. {answers[i]}");
-        }
-
-        if (invalidInput)
-        {
-            Console.WriteLine("\nInvalid input! Please try again using A, B, C, or D.");
-        }
-
-        Console.Write("\nAnswer: ");
-
-        string playerAnswer = (Console.ReadLine() ?? "").Trim().ToUpperInvariant();
-
-        selectedIndex = playerAnswer.Length == 1 ? letters.IndexOf(playerAnswer[0]) : -1;
-
-        invalidInput = selectedIndex < 0 || selectedIndex >= answers.Length;
-
-        if (invalidInput)
-        {
-            Console.Clear();
-        }
-    } while (invalidInput);
-
-    return selectedIndex;
-}
-
-static async Task QuestionOne(int score)
-{
-    Random random = new Random();
-
-    Console.WriteLine(
-        "Welcome to our Trivia game! We will ask you 12 questions of completely unrelated topics.. how many can you get?"
-    );
-    Console.WriteLine(
-        "================================================================================================================"
-    );
-
-    string question =
-        "Question 1: Who won their 8th World Championship Title in MotoGP in Portugal, making history?";
-
-    string correctAnswer = "Marc Marquez";
-    string fOneHistory = "Kimi Antonelli";
-
-    string[] answers = { "Marc Marquez", "Kimi Antonelli", "Valentino Rossi", "Scottie Scheffler" };
-
-    for (int i = answers.Length - 1; i > 0; i--)
-    {
-        int j = random.Next(i + 1);
-
-        string temporary = answers[i];
-        answers[i] = answers[j];
-        answers[j] = temporary;
-    }
-
-    int selectedIndex = ReadValidAnswer(question, answers);
-
-    await AnswerDelay();
-
-    if (answers[selectedIndex] == correctAnswer)
-    {
-        Console.WriteLine("Correct!");
-        score++;
-    }
-    else if (answers[selectedIndex] == fOneHistory)
-    {
-        Console.WriteLine(
-            $"Incorrect, The correct answer was {correctAnswer}. While not making MotoGP history, he still made history this year as he became the youngest WDC winner in F1 at just 20y and 68d old, taking the title of youngest WDC winner from Sebastian Vettel at 23y and 133d old"
-        );
+        Console.WriteLine("That's correct!");
+        playerScore++;
     }
     else
-    {
-        Console.WriteLine($"Incorrect... The correct answer was {correctAnswer}.");
-    }
-
-    WaitForPlayer();
-    await QuestionTwo(score);
+    Console.WriteLine("Wrong");
+}
+else
+{
+    Console.WriteLine("That's not one of the options, so you're wrong");
+}
 }
 
-static async Task QuestionTwo(int score)
+WyattQuestion1();
+
+Console.WriteLine("Next Question");
+
+void WyattQuestion2()
 {
-    Random random = new Random();
+    Console.WriteLine("Which of these rivers run through Egypt?");
+    Console.WriteLine("1. The Amazon");
+    Console.WriteLine("2. The Mississippi");
+    Console.WriteLine("3. The Rhine");
+    Console.WriteLine("4. The Nile");
 
-    string question =
-        "Making their debut with Minardi back in 2001, this F1 driver retired from Formula 1 in 2018 just to later come back in 2021. Securing 2 WDC in F1, 1 world title in WEC and 2 wins at the 24 Hour of Le Mans.. Who are they?";
 
-    string correctAnswer = "Fernando Alonso";
-    string iceMan = "Kimi Räikkönen";
-
-    string[] answers = { "Fernando Alonso", "Kimi Räikkönen", "Mark Webber", "Juan Pablo Mantoya" };
-
-    for (int i = answers.Length - 1; i > 0; i--)
+string userScore = Console.ReadLine();
+int answer = int.Parse(userScore);
+if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
+{
+    if(answer == 4)
     {
-        int j = random.Next(i + 1);
-
-        string temporary = answers[i];
-        answers[i] = answers[j];
-        answers[j] = temporary;
-    }
-
-    int selectedIndex = ReadValidAnswer(question, answers);
-
-    await AnswerDelay();
-
-    if (answers[selectedIndex] == correctAnswer)
-    {
-        Console.WriteLine("Correct!");
-        score++;
-    }
-    else if (answers[selectedIndex] == iceMan)
-    {
-        Console.WriteLine(
-            $"Bwoah, that's incorrect... The Iceman is visibly disappointed.. and that's rare... The correct answer was {correctAnswer}."
-        );
+        Console.WriteLine("That's correct!");
+        playerScore++;
     }
     else
-    {
-        Console.WriteLine($"Incorrect... The correct answer was {correctAnswer}.");
-    }
-
-    WaitForPlayer();
-    await QuestionThree(score);
+    Console.WriteLine("Wrong");
+}
+else
+{
+    Console.WriteLine("That's not one of the options, so you're wrong");
+}
 }
 
-static async Task QuestionThree(int score)
+WyattQuestion2();
+
+Console.WriteLine("Next Question");
+
+
+void WyattQuestion3()
 {
-    Random random = new Random();
+    Console.WriteLine("When did the Mayan calendar end?");
+    Console.WriteLine("1. 2012");
+    Console.WriteLine("2. 2000");
+    Console.WriteLine("3. 2020");
+    Console.WriteLine("4. 2016");
 
-    string question =
-        "Romain Grosjean was given the nickname 'The Phoenix' after escaping from his fiery crash at this 2020 Grand Prix, which circuit was it?";
 
-    string correctAnswer = "Bahrain International Circuit";
-    string crashAtSuzuka = "Suzuka International Racing Course";
-    string crashAtSpa = "Circuit de Spa-Francorchamps";
-    string crashAtImola = "Autodromo Internazionale Enzo e Dino Ferrari";
-
-    string[] answers =
-    {
-        "Bahrain International Circuit",
-        "Suzuka International Racing Course",
-        "Circuit de Spa-Francorchamps",
-        "Autodromo Internazionale Enzo e Dino Ferrari",
-    };
-
-    for (int i = answers.Length - 1; i > 0; i--)
-    {
-        int j = random.Next(i + 1);
-
-        string temporary = answers[i];
-        answers[i] = answers[j];
-        answers[j] = temporary;
-    }
-
-    int selectedIndex = ReadValidAnswer(question, answers);
-
-    await AnswerDelay();
-
-    if (answers[selectedIndex] == correctAnswer)
-    {
-        Console.WriteLine("Correct!");
-        score++;
-    }
-    else if (answers[selectedIndex] == crashAtSuzuka)
-    {
-        Console.WriteLine(
-            $"Incorrect! The correct answer was the {correctAnswer}. Jules Bianchi crashed here in 2014. His car hydroplaned and he experienced a 254g head impact crash after running into the back of recovery tractor picking up the crashed car of Adrian Sutil. He passed away 9 months later due to his injuries."
-        );
-    }
-    else if (answers[selectedIndex] == crashAtSpa)
-    {
-        Console.WriteLine(
-            $" Incorrect! The correct answer was the {correctAnswer}. Anthoine Hubert crashed here in Formula 2. Alesi spun out due to a tire puncture, and Hubert hit a car slowing down to avoid the incident, hitting the barrier and ending almost stationary on track. Correa came around the corner at high speed, and struck into the side of Hubert's #19 BWT Arden, causing Hubert's fatal injuries."
-        );
-    }
-    else if (answers[selectedIndex] == crashAtImola)
-    {
-        Console.WriteLine(
-            $"Incorrect! The correct answer was the {correctAnswer}. This crash is most notable for the death of 3 time WDC winner Ayrton Senna during the 1994 Grand Prix on May 1st. However, this entire race weekend was a tragedy. During Friday's practice, Rubens Barrichello suffered a crash when he hit the wall and flipped his car. During Saturday's qualifying, Roland Ratzenberger suffered a fatal crash on what was only his 3rd F1 Grand Prix when his front wing broke off and got lodged under his car, causing a crash into a wall at 195.7 MPH."
-        );
-    }
-
-    WaitForPlayer();
-    await QuestionFour(score);
-}
-
-static async Task QuestionFour(int score)
+    string userScore = Console.ReadLine();
+int answer = int.Parse(userScore);
+if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
 {
-    Random random = new Random();
-
-    string question =
-        "On September 23rd, 2024 this F1 Driver nicknamed 'The Honey Badger' left the F1 Paddock of the Singapore GP for the final time. Who was this?";
-
-    string correctAnswer = "Daniel Joseph Ricciardo";
-
-    string[] answers =
+    if(answer == 1)
     {
-        "Daniel Joseph Ricciardo",
-        "Carlos Sainz Vázquez de Castro Cenamor Rincón Rebollo Virto Moreno de Aranda Don Per Urrielagoiria Pérez del Pulgar",
-        " Charles Marc Hervé Perceval Leclerc",
-        "Oscar Jack Piastri",
-    };
-
-    for (int i = answers.Length - 1; i > 0; i--)
-    {
-        int j = random.Next(i + 1);
-
-        string temporary = answers[i];
-        answers[i] = answers[j];
-        answers[j] = temporary;
-    }
-
-    int selectedIndex = ReadValidAnswer(question, answers);
-
-    await AnswerDelay();
-
-    if (answers[selectedIndex] == correctAnswer)
-    {
-        Console.WriteLine(
-            "This still makes me sad everytime I hear it.. but you're right.. and he's never going to come back..."
-        );
-        score++;
+        Console.WriteLine("That's correct!");
+        playerScore++;
     }
     else
-    {
-        Console.WriteLine($"Incorrect.. The correct answer was {correctAnswer}.. DRS </3");
-    }
-
-    WaitForPlayer();
-    FinalResult(score);
+    Console.WriteLine("Wrong");
 }
-
-static void FinalResult(int score)
+else
 {
-    Console.Clear();
-
-    if (score > 1)
-    {
-        Console.WriteLine("Congratulations! You have finished this part of the trivia!");
-    }
-    else
-    {
-        Console.WriteLine("Rough.. but hey at least this section is over now..");
-    }
-
-    if (score == 4)
-    {
-        Console.WriteLine(
-            $"{score} for 4! 100%! You either really know your stuff.. or you're really good at guessing... Keep it up in the next 2 sections!"
-        );
-    }
-    else if (score == 3)
-    {
-        Console.WriteLine(
-            $"{score} of 4.. 75% for this section is really good! Hopefully the next sections you get 100%!"
-        );
-    }
-    else if (score == 2)
-    {
-        Console.WriteLine(
-            $"{score} of 4.. as a fan of motorsport and F1 especially, I'm sad to see that, but 50% isn't the worst! Hopefully the next sections go better for you!"
-        );
-    }
-    else if (score == 1)
-    {
-        Console.WriteLine(
-            $"{score} of 4.. Either motorsport isn't your strongsuit, or you guessed because you couldn't care less, which honestly I don't blame you. Hopefully the next section is easier for you.."
-        );
-    }
-    else
-    {
-        Console.WriteLine($"{score} of 4.. Hopefully the other sections go better for you..");
-    }
-
-    Console.WriteLine("\nPress Enter to finish...");
-
-    ConsoleKeyInfo key;
-
-    do
-    {
-        key = Console.ReadKey(intercept: true);
-    } while (key.Key != ConsoleKey.Enter);
-
-    Console.Clear();
+    Console.WriteLine("That's not one of the options, so you're wrong");
 }
+}
+
+WyattQuestion3();
+
+Console.WriteLine("Next Question");
+
+void WyattQuestion4()
+{
+    Console.WriteLine("What is the name of the protagonist in Red Dead Redemption?");
+    Console.WriteLine("1. Red Harlow");
+    Console.WriteLine("2. John Marston");
+    Console.WriteLine("3. Arthur Morgan");
+    Console.WriteLine("4. Niko Bellic");
+    
+    string userScore = Console.ReadLine();
+int answer = int.Parse(userScore);
+if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
+{
+    if(answer == 2)
+    {
+        Console.WriteLine("That's correct!");
+        playerScore++;
+    }
+    else
+    Console.WriteLine("Wrong");
+}
+else
+{
+    Console.WriteLine("That's not one of the options, so you're wrong");
+}
+}
+
+WyattQuestion4();
+Console.WriteLine("You got " + playerScore + " out of 4 questions correct.");
