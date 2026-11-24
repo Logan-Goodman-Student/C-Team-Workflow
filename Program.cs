@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("These next 4 questions were made by me.");
-int playerScore = 0;
+int score = 0;
 void WyattQuestion1()
 {
 Console.WriteLine("Where was Michael De Santa's first score located?");
@@ -46,7 +46,7 @@ if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
     if(answer == 4)
     {
         Console.WriteLine("That's correct!");
-        playerScore++;
+        score++;
     }
     else
     Console.WriteLine("Wrong");
@@ -78,7 +78,7 @@ if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
     if(answer == 1)
     {
         Console.WriteLine("That's correct!");
-        playerScore++;
+        score++;
     }
     else
     Console.WriteLine("Wrong");
@@ -108,7 +108,7 @@ if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
     if(answer == 2)
     {
         Console.WriteLine("That's correct!");
-        playerScore++;
+        score++;
     }
     else
     Console.WriteLine("Wrong");
@@ -120,4 +120,4 @@ else
 }
 
 WyattQuestion4();
-Console.WriteLine("You got " + playerScore + " out of 4 questions correct.");
+Console.WriteLine("You got " + score + " out of 4 questions correct.");
