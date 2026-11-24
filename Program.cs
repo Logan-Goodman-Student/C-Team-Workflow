@@ -1,4 +1,7 @@
-﻿do{
+﻿Console.WriteLine("And now for something American related!");
+int score = 0;
+
+do{
     await Task.Delay(2000);
     Console.WriteLine("What is the capital of Texas? (type the number)");
     Console.WriteLine("1. Washington");
@@ -6,6 +9,8 @@
     Console.WriteLine("3. Austin");
     Console.WriteLine("4. Verity");
 }while (Q1());
+
+score++;
 
 do{
     await Task.Delay(2000);
@@ -15,6 +20,8 @@ do{
     Console.WriteLine("3. Buzz Aldrin");
     Console.WriteLine("4. Yuri Gagarin");
 }while (Q2());
+
+score++;
 
 do{
     await Task.Delay(2000);
@@ -26,6 +33,8 @@ do{
     Console.WriteLine("4. All Of The Above");
 }while (Q3());
 
+score++;
+
 do{
     await Task.Delay(2000);
     Console.WriteLine("Who was the first president of the U.S.");
@@ -35,6 +44,9 @@ do{
     Console.WriteLine("4. Verity");
 }while (Q4());
 
+score++;
+
+Console.WriteLine("Here's your score!");
 
 bool Q1 ()
 {
