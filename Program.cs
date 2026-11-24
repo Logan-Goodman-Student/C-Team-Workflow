@@ -1,5 +1,6 @@
 ﻿Console.WriteLine("And now for something American related!");
-
+Console.WriteLine("(This is NOT scored because I have no way to implement it in time with");
+Console.WriteLine("(my restrictive method of using functions, so consider this a fun bonus)");
 
 do{
     await Task.Delay(2000);
@@ -10,8 +11,6 @@ do{
     Console.WriteLine("4. Verity");
 }while (Q1());
 
-
-
 do{
     await Task.Delay(2000);
     Console.WriteLine("Who was the first to land on the moon? (type the number)");
@@ -20,8 +19,6 @@ do{
     Console.WriteLine("3. Buzz Aldrin");
     Console.WriteLine("4. Yuri Gagarin");
 }while (Q2());
-
-
 
 do{
     await Task.Delay(2000);
