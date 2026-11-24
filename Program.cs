@@ -15,7 +15,7 @@ if(answer == 1 || answer == 2 || answer == 3 || answer == 4)
     if(answer == 2)
     {
         Console.WriteLine("That's correct!");
-        playerScore++;
+        score++;
     }
     else
     Console.WriteLine("Wrong");
