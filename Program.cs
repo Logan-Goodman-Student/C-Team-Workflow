@@ -30,8 +30,6 @@ do{
     Console.WriteLine("4. All Of The Above");
 }while (Q3());
 
-
-
 do{
     await Task.Delay(2000);
     Console.WriteLine("Who was the first president of the U.S.");
@@ -41,6 +39,9 @@ do{
     Console.WriteLine("4. Verity");
 }while (Q4());
 
+
+
+//question functions
 
 bool Q1 ()
 {
